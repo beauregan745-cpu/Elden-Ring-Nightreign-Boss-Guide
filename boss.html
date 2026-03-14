@@ -1,49 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Boss Guide</title>
+<meta charset="UTF-8">
+<title>Nightreign Boss Guide</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<h1>Dreglord</h1>
+<header>
+<h1>ELDEN RING: NIGHTREIGN</h1>
+<p>Boss Strategy Compendium</p>
+</header>
 
-<img src="images/dreglord.jpg" width="500">
+<section class="boss-grid">
 
-<p>
-Ancient ruler corrupted by shadow magic.
-</p>
+<div class="boss-card">
+
+<img src="images/dreglord.jpg">
+
+<h2>Dreglord</h2>
+
+<p>Ancient tyrant risen from the abyss.</p>
+
+<button onclick="openBoss('dreglord')">View Guide</button>
+
+</div>
+
+
+<div class="boss-card">
+
+<img src="images/balancers.jpg">
+
+<h2>The Balancers</h2>
+
+<p>Keepers of the fractured order.</p>
+
+<button onclick="openBoss('balancers')">View Guide</button>
+
+</div>
+
+</section>
+
+
+<section id="boss-guide" class="guide hidden">
+
+<h2 id="boss-name"></h2>
+
+<div class="guide-buttons">
 
 <button onclick="showNormal()">Normal</button>
 <button onclick="showEverdark()">Everdark</button>
 
+</div>
+
 <div id="normal">
 
-<h2>Weaknesses</h2>
-<ul>
-<li>Holy</li>
-<li>Lightning</li>
-</ul>
+<h3>Weaknesses</h3>
 
-<h2>Recommended Weapons</h2>
-<ul>
-<li>Sacred Relic Sword</li>
-<li>Blasphemous Blade</li>
-</ul>
+<ul id="weaknesses"></ul>
+
+<h3>Recommended Weapons</h3>
+
+<ul id="weapons"></ul>
 
 </div>
 
-<div id="everdark" style="display:none">
 
-<h2>Everdark Variant</h2>
+<div id="everdark" class="hidden">
 
-<p>
-Faster attacks and dark magic AOE.
-</p>
+<h3>Everdark Variant</h3>
+
+<p>Stronger, faster attacks and shadow abilities.</p>
 
 </div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
